@@ -1,0 +1,35 @@
+.transaction-history {
+    display: block;
+    margin: 20px auto;
+    max-width: 400px;
+    background-color: #F8F8F8;
+    border: 1px solid #D8D8D8;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+thead{
+    display: block;
+    background-color: #99CCFF;
+    color: #F8F8F8;
+    border-bottom: 1px solid #989898;
+}
+tr{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+tbody{
+    display: block;
+}
+.type-invoice{
+    background-color: #ccc;
+}
+.type-payment{
+    background-color: #CCFFFF;
+}
+.type-withdrawal{
+    background-color: #CC9999;
+}
+.type-deposit{
+    background-color: #99CC99;
+}
