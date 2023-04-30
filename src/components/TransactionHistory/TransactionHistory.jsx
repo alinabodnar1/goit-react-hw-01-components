@@ -15,14 +15,14 @@ export default function TransactionHistory({ items }) {
             <tbody>
                 {items.map(item => (
                     <tr key={item.id} className=
-                        {item.type.includes('invoice') &&
-                            cssModule['type-invoice'] || 
-                        item.type.includes('payment') &&
-                            cssModule['type-payment'] ||
-                        item.type.includes('withdrawal') &&
-                            cssModule['type-withdrawal'] ||
-                        item.type.includes('deposit') &&
-                            cssModule['type-deposit']
+                        {(item.type.includes('invoice') &&
+                            cssModule['type-invoice']) || 
+                        (item.type.includes('payment') &&
+                            cssModule['type-payment']) ||
+                        (item.type.includes('withdrawal') &&
+                            cssModule['type-withdrawal']) ||
+                        (item.type.includes('deposit') &&
+                            cssModule['type-deposit'])
                 }  
                     >
                         <td>{item.type}</td>
