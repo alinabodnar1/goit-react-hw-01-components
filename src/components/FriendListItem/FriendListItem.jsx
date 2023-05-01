@@ -1,23 +1,24 @@
 import PropTypes from 'prop-types';
 import cssModule from './FriendListItem.module.css';
 
-export default function FriendListItem(friend) {
+export default function FriendListItem({isOnline,name,avatar}) {
     return (
         <li className={cssModule.item}>
             <span className=
-                {friend.isOnline
+                {isOnline
                     ? `${cssModule.status} ${cssModule['on-line']}`
                     : `${cssModule.status} ${cssModule['off-line']}`  
                 }
             >
             </span>
-            <img className={cssModule.avatar} src={friend.avatar} alt={friend.name} width="48" />
-            <p className={cssModule.name}>{friend.name}</p>
+            <img className={cssModule.avatar} src={avatar} alt={name} width="48" />
+            <p className={cssModule.name}>{name}</p>
         </li>
     )
 }
 
 FriendListItem.propTypes = {
-    avatar: PropTypes.string,
-    name: PropTypes.string,
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
 }
